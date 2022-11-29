@@ -1,5 +1,5 @@
 export class News{
-  source: string ="" ;
+  source: Source={name: "",id:""} ;
   author: string = "";
   title: string = "";
   description: string="";
@@ -7,4 +7,9 @@ export class News{
   urlToImage: string="";
   publishedAt: string="";
   content: string="";
+}
+
+export class Source {
+  id: string= "";
+  name: string = ""
 }

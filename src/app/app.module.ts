@@ -7,9 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { WorldCupService } from './classes/service/world-cup.service';
 import { NewsServiceService } from './classes/service/news-service.service';
 import { TokenInterceptor } from './classes/interceptor/MyInterceptor';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
-
 
 @NgModule({
   declarations: [
@@ -19,12 +17,10 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-
+    HttpClientModule
   ],
   providers: [
-    WorldCupService, 
+    WorldCupService,
     NewsServiceService,
     {provide: HTTP_INTERCEPTORS,useClass: TokenInterceptor,multi: true}
   ],

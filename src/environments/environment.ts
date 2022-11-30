@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apisBaseUrlNews:"",
+  apisBaseUrlNews:"https://newsapi.org/v2/top-headlines",
   apisBaseUrlWorldCup:"https://world-cup-api-project.herokuapp.com",
   token:""
 };

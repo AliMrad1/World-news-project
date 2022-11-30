@@ -28,33 +28,7 @@
                         </ol>
                         
                         <!--carousel inner-->
-                        <div class="carousel-inner">
-                            <!--Item slider-->
-                            <div class="carousel-item active">
-                                <div class="card border-0 rounded-0 text-light overflow zoom">
-                                    <div class="position-relative">
-                                        <!--thumbnail img-->
-                                        <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <img class="img-fluid w-100"
-                                                     src="https://bootstrap.news/source/img1.jpg"
-                                                     alt="Bootstrap news template">
-                                            </a>
-                                        </div>
-                                        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                                            <!--title-->
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <h2 class="h3 post-title text-white my-1">Bootstrap 4 template news portal magazine perfect for news site</h2>
-                                            </a>
-                                            <!-- meta title -->
-                                            <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
-                                                <span class="news-date">Oct 22, 2019</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div *ngFor="let x of news" class="carousel-inner">                        
                             
                             <!--Item slider-->
                             <div class="carousel-item">
@@ -64,34 +38,7 @@
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
                                                 <img class="img-fluid w-100"
-                                                     src="https://bootstrap.news/source/img2.jpg"
-                                                     alt="Bootstrap news theme">
-                                            </a>
-                                        </div>
-                                        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                                            <!--title-->
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <h2 class="h3 post-title text-white my-1">Walmart shares up 10% on online sales lift</h2>
-                                            </a>
-                                            <!-- meta title -->
-                                            <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
-                                                <span class="news-date">Oct 22, 2019</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!--Item slider-->
-                            <div class="carousel-item">
-                                <div class="card border-0 rounded-0 text-light overflow zoom">
-                                    <div class="position-relative">
-                                        <!--thumbnail img-->
-                                        <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <img class="img-fluid w-100"
-                                                     src="https://bootstrap.news/source/img3.jpg"
+                                                     [src]="x.urlToImage"
                                                      alt="Bootstrap blog template">
                                             </a>
                                         </div>
@@ -109,33 +56,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!--Item slider-->
-                            <div class="carousel-item">
-                                <div class="card border-0 rounded-0 text-light overflow zoom">
-                                    <div class="position-relative">
-                                        <!--thumbnail img-->
-                                        <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <img class="img-fluid w-100"
-                                                     src="https://bootstrap.news/source/img4.jpg"
-                                                     alt="Bootstrap portal template">
-                                            </a>
-                                        </div>
-                                        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                                            <!--title-->
-                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                <h2 class="h3 post-title text-white my-1">The world's first floating farm making waves in Rotterdam</h2>
-                                            </a>
-                                            <!-- meta title -->
-                                            <div class="news-meta">
-                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">Jennifer</a></span>
-                                                <span class="news-date">Oct 22, 2019</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        
                             <!--end item slider-->
                         </div>
                         <!--end carousel inner-->

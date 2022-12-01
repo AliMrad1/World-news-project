@@ -17,58 +17,11 @@
                 <!--Start slider news-->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
 
 
-                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button *ngFor="let x of news, let i = index" [ngClass]="(i == 0) ? 'active' : null"
-                              type="button" data-bs-target="#carouselExampleIndicators" [attr.data-slide-to]="i" aria-current="true" attr.aria-label="Slide {{i}}">
-                      </button>
-
-                    </div>
-                    <div class="carousel-inner">
-
-                      <div  *ngFor="let x of news, let i = index" [ngClass]="(i == 0) ? 'carousel-item active':'carousel-item'">
+                  <ngb-carousel>
+                    <ng-template ngbSlide *ngFor="let x of news, let i = index">
                             <div class="card border-0 rounded-0 text-light overflow zoom">
                                 <div class="position-relative">
                                     <!--thumbnail img-->
@@ -92,69 +45,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                    </ng-template>
+                  </ngb-carousel>
 
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-
-
-<!--                    <div id="featured" class="carousel slide" data-ride="carousel">-->
-<!--                        &lt;!&ndash;dots navigate&ndash;&gt;-->
-<!--                        <ol  class="carousel-indicators top-indicator">-->
-<!--                            <li *ngFor="let x of news, let i = index" [ngClass]="(i == 0)?'active':''" data-target="#featured" [attr.data-slide-to]="i"></li>-->
-<!--                        </ol>-->
-
-<!--                        &lt;!&ndash;carousel inner&ndash;&gt;-->
-<!--                          <div class="carousel-inner">-->
-<!--                            &lt;!&ndash;Item slider&ndash;&gt;-->
-<!--                            <div  *ngFor="let x of news, let i = index" [ngClass]="(i == 0) ? 'carousel-item active':'carousel-item'">-->
-<!--                                <div class="card border-0 rounded-0 text-light overflow zoom">-->
-<!--                                    <div class="position-relative">-->
-<!--                                        &lt;!&ndash;thumbnail img&ndash;&gt;-->
-<!--                                        <div class="ratio_left-cover-1 image-wrapper">-->
-<!--                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">-->
-<!--                                                <img class="img-fluid w-100"-->
-<!--                                                     [src]="x.urlToImage"-->
-<!--                                                     alt="Bootstrap blog template">-->
-<!--                                            </a>-->
-<!--                                        </div>-->
-<!--                                        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">-->
-<!--                                            &lt;!&ndash;title&ndash;&gt;-->
-<!--                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">-->
-<!--                                                <h2 class="h3 post-title text-white my-1">{{x.title}}</h2>-->
-<!--                                            </a>-->
-<!--                                            &lt;!&ndash; meta title &ndash;&gt;-->
-<!--                                            <div class="news-meta">-->
-<!--                                                <span class="news-author">by <a class="text-white font-weight-bold" href="../category/author.html">{{x.author}}</a></span>-->
-<!--                                                <span class="news-date">{{x.publishedAt}}</span>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash;end item slider&ndash;&gt;-->
-<!--                      </div>-->
-
-<!--&lt;!&ndash;                        end carousel inner&ndash;&gt;-->
-<!--                    </div>-->
-
-                    <!--navigation-->
-<!--                    <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">-->
-<!--                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                        <span class="sr-only">Previous</span>-->
-<!--                    </a>-->
-<!--                    <a class="carousel-control-next" href="#featured" role="button" data-slide="next">-->
-<!--                        <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                        <span class="sr-only">Next</span>-->
-<!--                    </a>-->
                 </div>
                 <!--End slider news-->
 

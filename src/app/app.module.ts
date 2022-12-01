@@ -8,6 +8,7 @@ import { WorldCupService } from './classes/service/world-cup.service';
 import { NewsServiceService } from './classes/service/news-service.service';
 import { TokenInterceptor } from './classes/interceptor/MyInterceptor';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     WorldCupService,

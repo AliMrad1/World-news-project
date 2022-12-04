@@ -7,6 +7,8 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {SliderComponent} from "./slider/slider.component";
 import { HomeblockComponent } from './homeblock/homeblock.component';
 import { HomeblockcategoryComponent } from './homeblockcategory/homeblockcategory.component';
+import { NewssectionComponent } from './newssection/newssection.component';
+import { NewsboxComponent } from './newsbox/newsbox.component';
 
 
 
@@ -15,7 +17,9 @@ import { HomeblockcategoryComponent } from './homeblockcategory/homeblockcategor
     NewsmoduleComponent,
     SliderComponent,
     HomeblockComponent,
-    HomeblockcategoryComponent
+    HomeblockcategoryComponent,
+    NewssectionComponent,
+    NewsboxComponent
   ],
   imports: [
     CommonModule,

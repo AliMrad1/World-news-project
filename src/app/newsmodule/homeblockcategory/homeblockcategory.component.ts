@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HomeblockcategoryComponent implements OnInit {
 @Input() category:string='';
+@Input() img:string = '';
   constructor() { }
 
   ngOnInit(): void {

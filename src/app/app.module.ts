@@ -9,11 +9,13 @@ import { NewsServiceService } from './classes/service/news-service.service';
 import { TokenInterceptor } from './classes/interceptor/MyInterceptor';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,

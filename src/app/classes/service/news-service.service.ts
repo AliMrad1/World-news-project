@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Category } from '../Models/Category';
 import { Channel } from '../Models/Channel';
 import { News } from '../Models/News';
+import {distinct, distinctUntilChanged} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class NewsServiceService{
 
   public getNews(): Observable<News[]> {
     return this.httpClient.get<News[]>(`${this.apisUrl}`,{
-     params : this.params 
+     params : this.params
     });
   }
 
@@ -34,8 +35,8 @@ export class NewsServiceService{
 
   public getNewsByCategory(): Observable<Category[]> {
     return this.httpClient.get<Category[]>(`${this.apisUrl}/sources`,{
-     params : this.paramsCategory 
-    });
+     params : this.paramsCategory
+    }).pipe();
   }
 
 }

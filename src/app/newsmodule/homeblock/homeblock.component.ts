@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Category } from 'src/app/classes/Models/Category';
-import { HomeBlockCategoryModel } from 'src/app/classes/Models/HomeBlockCategoryModel';
 import { NewsServiceService } from 'src/app/classes/service/news-service.service';
+import {HomeBlockCategoryModel} from "../../classes/Models/HomeBlockCategoryModel";
 
 @Component({
   selector: 'homeblock',
@@ -24,5 +24,7 @@ export class HomeblockComponent  {
 //       console.log(this.category);
 //     })
 //   }
+  ngOnInit(): void {
+  }
 
 }

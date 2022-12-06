@@ -3,6 +3,12 @@
     <div class="grids-area-hny main-cont-wthree-fea row">
       <homeblockcategory class="col-lg-3 col-6 grids-feature">
    </homeblockcategory> 
+=======
+
+<section class="w3l-homeblock1 py-sm-5 py-4">
+  <div class="container py-md-4">
+    <div class="grids-area-hny main-cont-wthree-fea row">
+      <homeblockcategory *ngFor="let obj of homeBlockCM"  [category]="obj.category_name" [img]="obj.img" class="col-lg-3 col-6 grids-feature"></homeblockcategory>
     </div>
   </div>
 </section> -->
@@ -48,4 +54,6 @@
       </div>
   </div>
 </section>
+
+<!-- //homeblock1-->
 <!-- //homeblock1-->

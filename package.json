@@ -23,6 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^13.1.1",
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.2",
     "jquery": "^3.6.1",
     "lord-icon-element": "^4.0.1",
     "lottie-web": "^5.10.0",

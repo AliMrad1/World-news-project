@@ -1,16 +1,25 @@
-  <div class="card border-0 rounded-0 text-white overflow zoom">
+<div class="card card-body">
+<div class="card border-0 rounded-0 text-white overflow zoom">
     <div class="position-relative">
       <!--thumbnail img-->
       <div class="ratio_right-cover-2 image-wrapper">
         <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
           <img class="img-fluid"
-               src="https://bootstrap.news/source/img5.jpg"
+               [src]="img"
                alt="simple blog template bootstrap">
         </a>
-
-
       </div>
 
     </div>
   </div>
 
+  <div class="position-relative p-2 p-lg-3 b-0 w-100 bg-shadow">
+    <!-- category -->
+    <a class="p-1 badge badge-primary rounded-0" href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">{{category}}</a>
+
+    <!--title-->
+    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+      <h2 class="h5 text-black my-1">{{name}}</h2>
+    </a>
+  </div>
+</div>

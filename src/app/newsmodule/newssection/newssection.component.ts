@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./newssection.component.css']
 })
 export class NewssectionComponent implements OnInit {
+
+
+  constructor() {
+  }
+
   ngOnInit(): void {
   }
 }

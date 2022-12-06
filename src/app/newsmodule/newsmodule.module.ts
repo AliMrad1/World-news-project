@@ -9,7 +9,7 @@ import { HomeblockComponent } from './homeblock/homeblock.component';
 import { HomeblockcategoryComponent } from './homeblockcategory/homeblockcategory.component';
 import { NewssectionComponent } from './newssection/newssection.component';
 import { NewsboxComponent } from './newsbox/newsbox.component';
-
+import { NewsExpandedComponent } from './news-expanded/news-expanded.component';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { NewsboxComponent } from './newsbox/newsbox.component';
     HomeblockComponent,
     HomeblockcategoryComponent,
     NewssectionComponent,
-    NewsboxComponent
+    NewsboxComponent,
+    NewsExpandedComponent
   ],
   imports: [
     CommonModule,

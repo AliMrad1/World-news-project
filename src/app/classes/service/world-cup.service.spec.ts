@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WorldCapService } from './world-cup.service';
+import { WorldCupService } from './world-cup.service';
 
 describe('WorldCapService', () => {
-  let service: WorldCapService;
+  let service: WorldCupService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WorldCapService);
+    service = TestBed.inject(WorldCupService);
   });
 
   it('should be created', () => {

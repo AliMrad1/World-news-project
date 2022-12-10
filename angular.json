@@ -30,10 +30,7 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.js",
-               "./assets/js/owl.carousel.js",
-              " ./assets/js/theme-change.js"
-
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
             ]
      
           },

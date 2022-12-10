@@ -1,61 +1,12 @@
 
-<!------ Include the above in your HEAD tag ---------->
-
-<!--Container-->
-<div class="container">
-    <div class="row mb-2">
-        <div class="col-12 text-center pt-3">
-
-        </div>
-    </div>
-
-    <!--Start code-->
-    <div class="row">
-        <div class="col-12 pb-5">
-            <!--SECTION START-->
-            <section class="row">
-                <!--Start slider news-->
-
-
-                <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
-
-
-                  <ngb-carousel>
-                    <ng-template ngbSlide *ngFor="let x of news, let i = index">
-                            <div class="card border-0 rounded-0 text-light overflow zoom">
-                                <div class="position-relative">
-                                    <!--thumbnail img-->
-                                    <div class="ratio_left-cover-1 image-wrapper">
-                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                            <img class="img-fluid w-100"
-                                                 [src]="x.urlToImage"
-                                                 alt="Bootstrap blog template">
-                                        </a>
-                                    </div>
-                                    <div class=" position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                                        <!--title-->
-                                        <a [href]="x.url">
-                                            <h2 class="h3 post-title text-white my-1">{{x.title}}</h2>
-                                        </a>
-                                        <!-- meta title -->
-                                        <div class="news-meta mb-5">
-                                            <span class="news-author">by <a class="text-white font-weight-bold" >{{x.author}}</a></span>
-                                            <span class="news-date">{{x.publishedAt}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </ng-template>
-                  </ngb-carousel>
-
-<!-- <ngb-carousel>
+<ngb-carousel>
   <ng-template ngbSlide *ngFor="let x of news, let i = index">
-        <div class="card border-0 rounded-0 text-light overflow zoom">
-            <div class="position-relative">
+        <div class="card border-0 rounded-0 col-md-12 col-12 text-light overflow zoom">
+            <div class="position-relative ">
                 
                 <div class="ratio_left-cover-1 image-wrapper">
                     <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                        <img class="img-fluid w-100"
+                        <img class="d-block img-fluid "
                              [src]="x.urlToImage"
                              alt="Bootstrap blog template">
                     </a>
@@ -72,4 +23,4 @@
             </div>
         </div>
   </ng-template>
-</ngb-carousel> -->
+</ngb-carousel>

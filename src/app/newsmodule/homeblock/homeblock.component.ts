@@ -9,7 +9,9 @@ import {HomeBlockCategoryModel} from "../../classes/Models/HomeBlockCategoryMode
   styleUrls: ['./homeblock.component.css']
 })
 export class HomeblockComponent  {
-  homeBlockCM:HomeBlockCategoryModel[]=[]
+  homeBlockCM:HomeBlockCategoryModel[]=[
+    new HomeBlockCategoryModel("beauty",'./assets/img/sports.png' )
+  ]
 
   imgCategory:string[] = [
     './assets/img/interview.png','./assets/img/handshake.png','./assets/img/sports.png','./assets/img/technology.png',

@@ -2,19 +2,20 @@
     height: 90vh;
     position: relative;
     overflow: hidden;
+    float: right;
     @media(min-width: 600px) {
       height: 100vh;
     }
-  }
+  } 
   
-  img {
+  /* img {
     object-fit: cover; 
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-  }
+  } */
   .content{
     text-align: center right;
     font-size: 140%;
@@ -23,4 +24,13 @@
     margin-left: 30%;
     color: whitesmoke;
     font-style: bold;
+  }
+  .center {
+    text-align: center;
+    background-color: white;
+  }
+  .floatimg{
+    float: right;
+    width: 50%;
+    height: 88vh;
   }

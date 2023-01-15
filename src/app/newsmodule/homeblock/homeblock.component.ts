@@ -10,13 +10,13 @@ import {HomeBlockCategoryModel} from "../../classes/Models/HomeBlockCategoryMode
 })
 export class HomeblockComponent  {
   homeBlockCM:HomeBlockCategoryModel[]=[
-    new HomeBlockCategoryModel("beauty",'./assets/img/lotus.png')
+    new HomeBlockCategoryModel("beauty",'./assets/images/nails.png')
   ]
 
   imgCategory:string[] = [
 
-     './assets/img/interview.png','./assets/img/handshake.png','./assets/img/technology.png','./assets/img/sports.png',
-    './assets/img/clipboard.png','./assets/img/mask.png','./assets/img/science.png'
+     './assets/images/general.png','./assets/images/business.png','./assets/images/bluetooth.png','./assets/images/tennis.png',
+    './assets/images/cinema.png','./assets/images/health.png','./assets/images/science.png'
   ]
 constructor(private httpservice: NewsServiceService) { }
 

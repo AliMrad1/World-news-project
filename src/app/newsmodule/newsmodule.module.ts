@@ -10,6 +10,8 @@ import { HomeblockcategoryComponent } from './homeblockcategory/homeblockcategor
 import { NewssectionComponent } from './newssection/newssection.component';
 import { NewsboxComponent } from './newsbox/newsbox.component';
 import { NewsExpandedComponent } from './news-expanded/news-expanded.component';
+import { BackgroundvideoComponent } from './backgroundvideo/backgroundvideo.component';
+import { AboutUsComponent } from '../about-us/about-us.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { NewsExpandedComponent } from './news-expanded/news-expanded.component';
     HomeblockcategoryComponent,
     NewssectionComponent,
     NewsboxComponent,
-    NewsExpandedComponent
+    NewsExpandedComponent,
+    BackgroundvideoComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,

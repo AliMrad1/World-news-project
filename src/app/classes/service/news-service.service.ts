@@ -39,5 +39,13 @@ export class NewsServiceService{
     }).pipe();
   }
 
+  
+  public geNewsToASpecificCategory(httpCategoryParam:string): Observable<News[]> {
+    return this.httpClient.get<News[]>(`${this.apisUrl}`,{
+     params : new HttpParams()
+     .set("category",httpCategoryParam)
+     .set("apiKey","213fd8b9658f4a5fb03054c0835d7469")
+    }).pipe();
+  }
 }
 

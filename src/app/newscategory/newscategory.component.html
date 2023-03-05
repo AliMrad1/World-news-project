@@ -1,0 +1,38 @@
+<div class="w3l-homeblock3 py-5">
+    <div class="container py-lg-5 py-md-4">
+        <h3 class="section-title-left mb-4"> {{routeCategory}} </h3>
+        <div class="row top-pics " >
+            <div class="col-lg-4 col-md-6 mb-4" *ngFor="let i of newsCategory">
+                <div style="background: url({{i.urlToImage}}) no-repeat 0px 0px;
+                background-size: cover;
+                padding: 20px;
+                border-radius: var(--border-radius-full);
+                height: 450px;
+                display: grid;
+                align-items: flex-end;
+                position: relative;
+                z-index: 1; ">
+                    <div class="card-body blog-details">
+                        <a href="#blog-single.html" class="blog-desc">
+                            {{i.title}}
+                        </a>
+                        <div class="author align-items-center">
+                            <img src="assets/images/a1.jpg" alt="" class="img-fluid rounded-circle" />
+                            <ul class="blog-meta">
+                                <li>
+                                    <a href="author.html">{{i.author}}</a>
+                                </li>
+                                <li class="meta-item blog-lesson">
+                                    <span class="meta-value"> {{i.publishedAt}} </span>. <span
+                                        class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+            </div>
+</div>

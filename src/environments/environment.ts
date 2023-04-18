@@ -3,10 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   apisBaseUrlNews:"https://newsapi.org/v2/top-headlines",
   apisBaseUrlWorldCup:"https://world-cup-api-project.herokuapp.com",
-  token:""
+  token:"",
+  apiLocalBaseUrl: "http://localhost:5134"
 };
 
 /*

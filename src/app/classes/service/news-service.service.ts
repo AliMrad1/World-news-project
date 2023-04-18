@@ -13,6 +13,7 @@ import {distinct, distinctUntilChanged} from "rxjs/operators";
 export class NewsServiceService{
 
   apisUrl:string = environment.apisBaseUrlNews;
+  apisUrlLocal:string = environment.apiLocalBaseUrl;
 
   constructor(private httpClient:HttpClient) { }
   // country=us&apiKey=API_KEY
@@ -28,6 +29,10 @@ export class NewsServiceService{
 
   public getNewsByChannel(channelName: Channel): Observable<News> {
     return this.httpClient.get<News>(`${this.apisUrl}`);
+  }
+
+  public getCategories(): Observable<News> {
+    return this.httpClient.get<News>(`${this.apisUrlLocal}/category/all`);
   }
 
   private paramsCategory:HttpParams = new HttpParams()

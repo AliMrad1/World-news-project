@@ -20,18 +20,22 @@ export class HomeblockComponent  {
   ]
 constructor(private httpservice: NewsServiceService) { }
 
- public category: Category[]=[];
+ public category: any[]=[];
   public categoryWithoutRepetition:string[] = [];
 
 
    ngOnInit(): void {
-     this.httpservice.getNewsByCategory().subscribe((response:any)=>{
-       this.category=response.sources;
-       this.getCategoryFromApi();
-       // replace categoryWithoutRepetition with non repetition of category
-       this.categoryWithoutRepetition = this.removeDuplicationFromAnArray(this.categoryWithoutRepetition);
-       this.addToHomeBlockCategoryModel(this.categoryWithoutRepetition, this.imgCategory);
-     })
+    //  this.httpservice.getNewsByCategory().subscribe((response:any)=>{
+    //    this.category=response.sources;
+    //    this.getCategoryFromApi();
+    //    // replace categoryWithoutRepetition with non repetition of category
+    //    this.categoryWithoutRepetition = this.removeDuplicationFromAnArray(this.categoryWithoutRepetition);
+    //    this.addToHomeBlockCategoryModel(this.categoryWithoutRepetition, this.imgCategory);
+    //  })
+
+    this.httpservice.getCategories().subscribe((response:any) => {
+        this.category = response;
+    });
    }
 
   private getCategoryFromApi(){

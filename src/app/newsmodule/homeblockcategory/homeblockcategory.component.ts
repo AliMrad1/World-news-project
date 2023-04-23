@@ -6,8 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./homeblockcategory.component.css']
 })
 export class HomeblockcategoryComponent implements OnInit {
-@Input() category:string='';
-@Input() img:string = '';
+
+  @Input() id:string ="";
+  @Input() category:string='';
+  @Input() img:string = '';
   constructor() { }
 
   ngOnInit(): void {

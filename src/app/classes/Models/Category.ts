@@ -1,10 +1,6 @@
 export class Category
-    {
-        id: string ='';
-        name: string='';
-        description: string='';
-        url: string='';
-        category: string='';
-        language: string='';
-        country: string='';
-      }
+{
+  id: string ='';
+  name: string='';
+  img_url: string='';
+}

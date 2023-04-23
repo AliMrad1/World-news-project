@@ -15,7 +15,7 @@ export class NewsExpandedComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.getNewsByCategory().subscribe((response:any)=>{
+    this.http.getNewsByCategory(1).subscribe((response:any)=>{
       this.newsWithCategory = response.sources;
       console.log(this.newsWithCategory);
     })

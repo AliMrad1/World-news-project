@@ -9,16 +9,28 @@ import { NewsServiceService } from './classes/service/news-service.service';
 import { TokenInterceptor } from './classes/interceptor/MyInterceptor';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { SignupComponent } from './signup-page/signup-page.component';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    UserComponent,
+    SignupComponent,
+   
+
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     WorldCupService,

@@ -1,5 +1,16 @@
-
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 html, body { height: 100%;
     overflow-x: hidden;
  }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    background-color: #fff;
+    color: #222;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #222;
+    color: #fff;
+  }

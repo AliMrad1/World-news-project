@@ -5,7 +5,6 @@ import { environment } from 'src/environments/environment';
 import { Category } from '../Models/Category';
 import { Channel } from '../Models/Channel';
 import { News } from '../Models/News';
-import {distinct, distinctUntilChanged} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +12,7 @@ import {distinct, distinctUntilChanged} from "rxjs/operators";
 export class NewsServiceService{
 
   apisUrl:string = environment.apisBaseUrlNews;
+  apisUrlLocal:string = environment.apiLocalBaseUrl;
 
   constructor(private httpClient:HttpClient) { }
   // country=us&apiKey=API_KEY
@@ -30,22 +30,17 @@ export class NewsServiceService{
     return this.httpClient.get<News>(`${this.apisUrl}`);
   }
 
-  private paramsCategory:HttpParams = new HttpParams()
-          .set("apiKey","213fd8b9658f4a5fb03054c0835d7469");
-
-  public getNewsByCategory(): Observable<Category[]> {
-    return this.httpClient.get<Category[]>(`${this.apisUrl}/sources`,{
-     params : this.paramsCategory
-    }).pipe();
+  public getCategories(): Observable<Category[]> {
+    return this.httpClient.get<Category[]>(`${this.apisUrlLocal}/category/all`);
   }
 
   
-  public geNewsToASpecificCategory(httpCategoryParam:string): Observable<News[]> {
-    return this.httpClient.get<News[]>(`${this.apisUrl}`,{
-     params : new HttpParams()
-     .set("category",httpCategoryParam)
-     .set("apiKey","213fd8b9658f4a5fb03054c0835d7469")
+  public getNewsByCategory(category_id:number): Observable<News[]> {
+    const params = new HttpParams().set('id', category_id);
+    return this.httpClient.get<News[]>(`${this.apisUrlLocal}/category/news`,{
+      params
     }).pipe();
   }
+
 }
 

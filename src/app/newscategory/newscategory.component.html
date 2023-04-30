@@ -3,11 +3,12 @@
         <h3 class="section-title-left mb-4"> {{routeCategory}} </h3>
         <div class="row top-pics " >
             <div class="col-lg-4 col-md-6 mb-4" *ngFor="let i of newsCategory">
-                <div style="background: url({{i.urlToImage}}) no-repeat 0px 0px;
+                <div style="background: url({{i.img_url}}) no-repeat 0px 0px;
                 background-size: cover;
                 padding: 20px;
                 border-radius: var(--border-radius-full);
                 height: 450px;
+                max-width: 100%;
                 display: grid;
                 align-items: flex-end;
                 position: relative;
@@ -23,7 +24,7 @@
                                     <a href="author.html">{{i.author}}</a>
                                 </li>
                                 <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> {{i.publishedAt}} </span>. <span
+                                    <span class="meta-value"> {{i.created_at}} </span>. <span
                                         class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
                                 </li>
                             </ul>
@@ -33,6 +34,6 @@
             </div>
 
 
-            </div>
-            </div>
+         </div>
+    </div>
 </div>

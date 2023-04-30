@@ -1,15 +1,12 @@
-export class News{
-  source: Source={name: "",id:""} ;
-  author: string = "";
-  title: string = "";
-  description: string="";
-  url: string="";
-  urlToImage: string="";
-  publishedAt: string="";
-  content: string="";
-}
+import { Category } from "./Category";
 
-export class Source {
-  id: string= "";
-  name: string = ""
+export class News{
+  id:number = 0;
+  img_url: string = "";
+  title: string = "";
+  short_desc: string="";
+  long_desc: string="";
+  category: Category | null = null;
+  created_at: string="";
+  author: string = "";
 }

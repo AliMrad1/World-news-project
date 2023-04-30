@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\classes",
+    "\\src\\app\\classes\\interceptor",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\classes\\interceptor\\MyInterceptor.ts",
+  "PreviewInSolutionExplorer": false
+}

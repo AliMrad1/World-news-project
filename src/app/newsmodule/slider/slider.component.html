@@ -6,17 +6,17 @@
                 <div class="ratio_left-cover-1 image-wrapper">
                     <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
                         <img class="d-block img-fluid "
-                             [src]="x.urlToImage"
+                             [src]="x.img_url"
                              alt="Bootstrap blog template">
                     </a>
                 </div>
                 <div class=" position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                    <a [href]="x.url">
+                    <a [href]="x.short_desc">
                         <h2 class="h3 post-title text-white my-1">{{x.title}}</h2>
                     </a>
                     <div class="news-meta mb-5">
-                        <span class="news-author">by <a class="text-white font-weight-bold" >{{x.author}}</a></span>
-                        <span class="news-date ms-3">{{x.publishedAt}}</span>
+                        <span class="news-author">by <a class="text-white font-weight-bold" >author</a></span>
+                        <span class="news-date ms-3">{{x.created_at}}</span>
                     </div>
                 </div>
             </div>

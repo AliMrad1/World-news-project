@@ -6,7 +6,7 @@ export class News{
   title: string = "";
   short_desc: string="";
   long_desc: string="";
-  category: Category | null = null;
+  category: Category =new Category();
   created_at: string="";
   author: string = "";
 }

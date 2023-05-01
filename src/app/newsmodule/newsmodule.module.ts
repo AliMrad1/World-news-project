@@ -12,6 +12,9 @@ import { NewsboxComponent } from './newsbox/newsbox.component';
 import { NewsExpandedComponent } from './news-expanded/news-expanded.component';
 import { BackgroundvideoComponent } from './backgroundvideo/backgroundvideo.component';
 import { AboutUsComponent } from '../about-us/about-us.component';
+import { AddnewsComponent } from './addnews/addnews.component';
+import { FormsModule } from '@angular/forms';
+import { AddnewsresponseComponent } from './addnewsresponse/addnewsresponse.component';
 
 
 @NgModule({
@@ -24,12 +27,15 @@ import { AboutUsComponent } from '../about-us/about-us.component';
     NewsboxComponent,
     NewsExpandedComponent,
     BackgroundvideoComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AddnewsComponent,
+    AddnewsresponseComponent
   ],
   imports: [
     CommonModule,
     NewsmoduleRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ]
 })
 export class NewsmoduleModule { }

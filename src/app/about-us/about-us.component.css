@@ -1,8 +1,9 @@
 .img-container {
-    height: 90vh;
+    height: 105vh;
     position: relative;
     overflow: hidden;
     float: right;
+   
     @media(min-width: 600px) {
       height: 100vh;
     }
@@ -29,8 +30,8 @@
     text-align: center;
     background-color: white;
   }
-  .floatimg{
+  .floating{
     float: right;
     width: 50%;
-    height: 88vh;
+    height: 104vh;
   }

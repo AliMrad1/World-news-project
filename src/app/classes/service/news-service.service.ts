@@ -45,5 +45,10 @@ export class NewsServiceService{
   public addNews(news:News): Observable<string>{
     return this.httpClient.post<string>(`${this.apisUrlLocal}/category/addnews`, news).pipe();
   }
+
+  public SLIDER_NEWS(): Observable<News[]> {
+    return this.httpClient.get<News[]>(`${this.apisUrlLocal}/category/slider/news`,{}).pipe();
+  }
+ 
 }
 

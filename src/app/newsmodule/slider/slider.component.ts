@@ -9,19 +9,14 @@ import { NewsServiceService } from '../../classes/service/news-service.service';
 })
 export class SliderComponent {
 
- public news : News[]=[];
-
-
-
+    public news : News[]=[];
 
    constructor( private Http : NewsServiceService) { }
 
    ngOnInit(): void {
 
-
-    this.Http.getNews().subscribe((response: any)=> {
-       this.news=response.articles;
-       console.log(this.news);
+    this.Http.SLIDER_NEWS().subscribe((response: any)=> {
+       this.news=response;
     });
   }
 

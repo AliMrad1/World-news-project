@@ -1,55 +1,32 @@
-  <!-- <ngb-carousel>
-  <ng-template ngbSlide *ngFor="let x of news, let i = index">
-        <div class="card border-0 rounded-0 col-md-12 col-12 text-light overflow zoom">
-            <div class="position-relative ">
-                
-                <div class="ratio_left-cover-1 image-wrapper">
-                    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                        <img class="d-block img-fluid "
-                             [src]="x.img_url"
-                             alt="Bootstrap blog template">
-                    </a>
-                </div>
-                <div class=" position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                    <a [href]="x.short_desc">
-                        <h2 class="h3 post-title text-white my-1">{{x.title}}</h2>
-                    </a>
-                    <div class="news-meta mb-5">
-                        <span class="news-author">by <a class="text-white font-weight-bold" >author</a></span>
-                        <span class="news-date ms-3">{{x.created_at}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-  </ng-template>
-</ngb-carousel>   -->
-
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button *ngFor="let x of news, let i = index " type="button" class="bg-light" data-bs-target="#carouselExampleDark" 
-    [attr.data-bs-slide-to]="i" ></button>
-  </div>
-  <div class="carousel-inner">
-    <div [ngClass]="i==0 ? 'carousel-item active' : 'carousel-item'" *ngFor="let x of news, let i = index"  data-bs-interval="10000">
-      <img [src]="x.urlToImage" class="d-block w-100" alt="No Image for this news">
-      <div class="carousel-caption d-none d-md-block bg-shadow">
-        <h5 class="text-white my-1">{{x.title}}</h5>
-        <p class="text-white my-1">{{x.description}}</p>
-        <div class="news-meta mb-5">
-          <span class="news-author">by <a class="text-white font-weight-bold" >{{x.author}}</a></span>
-          <span class="text-white  news-date ms-3">{{x.publishedAt}}</span>
-      </div>
-      </div>
-    </div>
  
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let x of news, let i = index">
+          <div class="card border-0 rounded-0 col-md-12 col-12 text-light overflow zoom">
+              <div class="position-relative ">
+                  
+                  <div class="ratio_left-cover-1 image-wrapper">
+                      <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                          <img class="d-block img-fluid "
+                               [src]="x.img_url"
+                               alt="Bootstrap blog template">
+                      </a>
+                  </div>
+                  <div class=" position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                      <a [href]="x.short_desc">
+                          <h2 class="h3 post-title text-white my-1">{{x.title}}</h2>
+                      </a>
+                      <div class="news-meta mb-1">
+                          <span class="news-author">by <a class="text-white font-weight-bold" >{{x.author}}</a></span>
+                          <span class="news-date ms-3">{{x.created_at}}</span>
+                      </div>
+                      <div class="news-meta mb-5">
+                        <span class="fst-italic fw-bolder">{{x.category.name}}</span>
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </ng-template>
+  </ngb-carousel> 
+  
+  
+  

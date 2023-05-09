@@ -1,47 +1,42 @@
-<!-- <div>
-      <h3>Create An Account</h3>
-       <form>
-         <div>
-           <label for="email">Email</label>
-           <input  required  type="text">
-           <label for="password">Password</label>
-           <input  type="password">
-         </div>
-         <button>Submit</button>
-         <span>Already have an account? 
-         <a routerLink="/login">Login</a></span>
-       </form>
-    </div>  -->
+<body>
+  <div class="container">
+    <section id="content">
+      <!-- <form> -->
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()"> 
+        <h1>Create An Account</h1>
+        <div>
+          <input type="text" placeholder="Full Name" required="" formControlName="fullname" id="fullname" />
+        </div>
+        <div>
+          
+          <input type="date" placeholder="Date of Birth" formControlName="dateofbirth" required="" id="dateofbirth" />
+      
+      </div>
 
-     <body>
-        <div class="container">
-          <section id="content">
-            <!-- <form> -->
-             <form [formGroup]="signUpForm" (ngSubmit)="signUp()"> 
-              <h1>Create An Account</h1>
-              <div>
-                <input type="text" placeholder="Full Name" required="" id="fullname" />
-              </div>
-              <div>
-                
-                <input type="date" placeholder="Date of Birth"  required="" id="dateofbirth" />
-            
-            </div>
+        <div>
+      
+          <input type="text" placeholder="Email Adress" formControlName="email" required="" id="Email" />
+      
+      
+        <div>
+      
+          <input type="password" placeholder="Password" formControlName="password" required="" id="password" />
+  
+          <select class="form-select" formControlName="role.id" multiple  aria-label="Choose your role">
+            <option *ngFor="let role of roles" [value]="role.id">{{ role.role_name }}</option>
+          </select>
 
-              <div>
-            
-                <input type="text" placeholder="Email Adress" formControlName="email" required="" id="Email" />
-            
-            
-              <div>
-            
-                <input type="password" placeholder="Password" formControlName="password" required="" id="password" />
-        
-    
-                <input type="submit" value="Submit" />
-                <a routerLink="/login">Login</a>
-                <a>Already have an account ?</a>
-              
-            
-    
+          <input type="submit" value="Submit" />
+          <a routerLink="/login">Login</a>
+          <a>Already have an account ?</a>
+          
+      </div>
+
+      <div class="alert m-2" [ngClass]="{'alert-success': isSuccess, 'alert-danger': isError}" *ngIf="isOk">
+        {{ message }}
+      </div>
+    </div>
+  </form>
+</section>
+</div>
         

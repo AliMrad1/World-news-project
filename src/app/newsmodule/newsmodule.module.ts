@@ -15,6 +15,7 @@ import { AboutUsComponent } from '../about-us/about-us.component';
 import { AddnewsComponent } from './addnews/addnews.component';
 import { FormsModule } from '@angular/forms';
 import { AddnewsresponseComponent } from './addnewsresponse/addnewsresponse.component';
+import { RecommendationsComponent } from '../recommendations/recommendations.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AddnewsresponseComponent } from './addnewsresponse/addnewsresponse.comp
     BackgroundvideoComponent,
     AboutUsComponent,
     AddnewsComponent,
-    AddnewsresponseComponent
+    AddnewsresponseComponent,
+    RecommendationsComponent
   ],
   imports: [
     CommonModule,

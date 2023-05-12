@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  }
+  
+  .container1{
+    display: flex;
+  align-items: center;
+  }
+  .cinema1{
+    width: 9%;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .card {
+    width: calc(50%  10px); /* Set width of each card to 50% of container width minus any margins or padding */
+    margin-right: 20%; 
+    margin-left:5% ;
+    margin-top: 1%;
+    border: 5px solid pink;
+  }
+
+  .card img {
+    object-fit: cover; /* Set the object-fit property to cover to stretch the image to fill the height of the card */
+    height: 100%; /* Set the height of the image to 100% to make it full-size inside the card */
+  }
+
+  .separator {
+    border-bottom: 1px solid #ccc; /* Add a 1px solid border on the bottom to create a line */
+    margin: 20px 0; /* Add some margin to create some spacing between the sections and the line */
+  }
+  h1 {
+    color: black;
+    margin-left:1%;
+  }
+  

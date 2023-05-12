@@ -20,8 +20,7 @@ import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormsModule } 
     NavbarComponent,
     LoginComponent,
     UserComponent,
-    SignupComponent,
-   
+    SignupComponent   
 
     ],
   imports: [

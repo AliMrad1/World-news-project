@@ -10,3 +10,12 @@ export class News{
   created_at: string="";
   author: string = "";
 }
+
+export class NewsRequest{
+  img: File | null = null;
+  title: string = "";
+  short_desc: string="";
+  long_desc: string="";
+  category: Category =new Category();
+  author: string = "";
+}

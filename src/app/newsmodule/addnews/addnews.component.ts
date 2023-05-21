@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Category } from 'src/app/classes/Models/Category';
-import { News } from 'src/app/classes/Models/News';
+import { News, NewsRequest } from 'src/app/classes/Models/News';
 import { NewsServiceService } from 'src/app/classes/service/news-service.service';
 import { SharedService } from 'src/app/classes/service/shared.service';
 
@@ -13,7 +13,7 @@ import { SharedService } from 'src/app/classes/service/shared.service';
 export class AddnewsComponent implements OnInit {
 
   public categories: Category[]=[];
-  public news:News = new News();
+  public news:NewsRequest = new NewsRequest();
   
   constructor(private httpservice:NewsServiceService,private router: Router, private shared:SharedService) { }
 
@@ -25,10 +25,13 @@ export class AddnewsComponent implements OnInit {
   }
 
   selectedFileName: string = "";
+  selectedFile: File | null = null;
 
   onFileSelected(event:any): void {
-    const file = event.target.files[0];
-    this.selectedFileName = file.name;
+    this.selectedFile = event.target.files[0];
+    if(this.selectedFile != null){
+      this.selectedFileName = this.selectedFile.name;
+    }
   }
 
 
@@ -37,9 +40,12 @@ export class AddnewsComponent implements OnInit {
   }
 
   ADD_NEW_NEWS(): void {
+    this.news.img = this.selectedFile;
     this.httpservice.addNews(this.news).subscribe((response:any) => {
       this.router.navigate(['/news/new/redirect']);
       this.shared.sharedData = response.response;
     })
+
+    console.log(this.news);
   }
 }

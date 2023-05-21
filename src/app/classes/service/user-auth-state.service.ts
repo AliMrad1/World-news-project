@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class SharedService {
+export class UserAuthStateService {
 
-  sharedData?: string;
-
+  isLoggedIn:boolean = true;
+  token:string = "";
   constructor() { }
 }

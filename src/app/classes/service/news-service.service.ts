@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Category } from '../Models/Category';
 import { Channel } from '../Models/Channel';
-import { News } from '../Models/News';
+import { News, NewsRequest } from '../Models/News';
 
 @Injectable({
   providedIn: 'root'
@@ -42,7 +42,7 @@ export class NewsServiceService{
     }).pipe();
   }
 
-  public addNews(news:News): Observable<string>{
+  public addNews(news:NewsRequest): Observable<string>{
     return this.httpClient.post<string>(`${this.apisUrlLocal}/category/addnews`, news).pipe();
   }
 

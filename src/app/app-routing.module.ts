@@ -4,6 +4,7 @@ import {UserComponent} from 'src/app/user/user.component';
  import {LoginComponent} from 'src/app/login/login.component';
  import {SignupComponent} from 'src/app/signup-page/signup-page.component';
  import { AboutUsComponent } from './about-us/about-us.component';
+ import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [{ path: '', loadChildren: () => import('./newsmodule/newsmodule.module').then(m => m.NewsmoduleModule) },
  { path: 'news', loadChildren: () => import('./newscategory/newscategory.module').then(m => m.NewscategoryModule) },
@@ -11,7 +12,8 @@ const routes: Routes = [{ path: '', loadChildren: () => import('./newsmodule/new
  { path: 'login', component: LoginComponent },
  {path:'signUp', component:SignupComponent },
  {path:'about-us', component:AboutUsComponent},
- {path:'user', component:UserComponent }
+ {path:'user', component:UserComponent },
+ {path:'profile', component:ProfileComponent }
 
 
 ];

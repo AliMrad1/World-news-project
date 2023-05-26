@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { SignupComponent } from './signup-page/signup-page.component';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormsModule } 
     NavbarComponent,
     LoginComponent,
     UserComponent,
-    SignupComponent   
+    SignupComponent,
+    ProfileComponent   
 
     ],
   imports: [

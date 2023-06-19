@@ -29,4 +29,4 @@ To run the E-News project frontend locally, follow these steps:
 
 ## Contact
 
-For any inquiries or questions related to the frontend of the E-News project, please contact [your-email-address].
+For any inquiries or questions related to the frontend of the E-News project, please contact [pr.alimrad@outlook.com] [Mhmd.zd.2000@outlook.com] [amenakhalife26@gmail.com].
